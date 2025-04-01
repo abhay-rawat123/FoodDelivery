@@ -1,0 +1,27 @@
+services:
+  fooddelivery.apigateway:
+    image: ${DOCKER_REGISTRY-}fooddeliveryapigateway
+    build:
+      context: .
+      dockerfile: FoodDelivery.APIGateway/Dockerfile
+
+  deliveryservice.api:
+    image: ${DOCKER_REGISTRY-}deliveryserviceapi
+    build:
+      context: .
+      dockerfile: DeliveryService.API/Dockerfile
+
+
+  orderservice.api:
+    image: ${DOCKER_REGISTRY-}orderserviceapi
+    build:
+      context: .
+      dockerfile: OrderService.API/Dockerfile
+
+
+  resturantservice.api:
+    image: ${DOCKER_REGISTRY-}resturantserviceapi
+    build:
+      context: .
+      dockerfile: ResturantService.API/Dockerfile
+
